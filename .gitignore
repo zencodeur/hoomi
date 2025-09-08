@@ -1,2 +1,6 @@
 CAHIER_DES_CHARGES_HOOMI.md
 QWEN.md
+
+# Documentation générée
+docs/*.html
+docs/*.pdf
