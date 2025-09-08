@@ -1,0 +1,85 @@
+<svg width="350" height="350" viewBox="0 0 350 350" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Définition de la police Baloo 2 -->
+        <style type="text/css"><![CDATA[
+            @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap');
+        ]]></style>
+        <!-- Dégradés -->
+        <linearGradient id="heartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ADD8E6" />
+            <stop offset="100%" stop-color="#87CEEB" />
+        </linearGradient>
+        <linearGradient id="rainbowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FFB6C1" />
+            <stop offset="25%" stop-color="#98FB98" />
+            <stop offset="50%" stop-color="#ADD8E6" />
+            <stop offset="75%" stop-color="#D8BFD8" />
+            <stop offset="100%" stop-color="#FFD700" />
+        </linearGradient>
+
+        <!-- Glow -->
+        <filter id="textGlow">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2" result="blur"/>
+            <feFlood flood-color="white" flood-opacity="0.8" result="glowColor"/>
+            <feComposite in="glowColor" in2="blur" operator="in" result="glow"/>
+            <feMerge>
+                <feMergeNode in="glow"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <filter id="bubbleGlow">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"/>
+            <feColorMatrix in="blur" mode="matrix" 
+                values="1 0 0 0 0  
+                        0 1 0 0 0  
+                        0 0 1 0 0  
+                        0 0 0 20 -8" result="glow"/>
+            <feComposite in="SourceGraphic" in2="glow" operator="over"/>
+        </filter>
+    </defs>
+
+    <!-- Cœur agrandi -->
+    <path d="M175,90 
+             C105,40 35,110 70,170 
+             C100,220 140,260 175,280 
+             C210,260 250,220 280,170 
+             C315,110 245,40 175,90 Z" 
+          fill="url(#heartGradient)" />
+
+    <!-- Famille -->
+    <g id="family" fill="#5a7d9a">
+        <!-- Adulte gauche -->
+        <circle cx="135" cy="160" r="11" />
+        <path d="M135,171 L128,195 L142,195 Z" />
+        <!-- Enfant centre -->
+        <circle cx="175" cy="150" r="8" />
+        <path d="M175,158 L170,180 L180,180 Z" />
+        <!-- Adulte droite -->
+        <circle cx="215" cy="160" r="11" />
+        <path d="M215,171 L208,195 L222,195 Z" />
+    </g>
+
+    <!-- Bulles au-dessus des silhouettes -->
+    <g filter="url(#bubbleGlow)" opacity="0.9">
+        <!-- Gauche -->
+        <ellipse cx="135" cy="130" rx="14" ry="12" fill="white" />
+        <text x="135" y="134" text-anchor="middle" font-family="Arial" font-size="11" fill="#5a7d9a">❤</text>
+
+        <!-- Centre -->
+        <ellipse cx="175" cy="110" rx="14" ry="12" fill="white" />
+        <text x="175" y="114" text-anchor="middle" font-family="Arial" font-size="11" fill="#5a7d9a">🤔</text>
+
+        <!-- Droite -->
+        <ellipse cx="215" cy="130" rx="14" ry="12" fill="white" />
+        <text x="215" y="134" text-anchor="middle" font-family="Arial" font-size="11" fill="#5a7d9a">😊</text>
+    </g>
+
+    <!-- Texte avec police Baloo 2 -->
+    <text x="175" y="230" dominant-baseline="middle" text-anchor="middle" 
+          font-family="'Baloo 2', sans-serif" 
+          font-size="34" fill="url(#rainbowGradient)" font-weight="700"
+          stroke="white" stroke-width="3" stroke-opacity="0.9"
+          paint-order="stroke fill" filter="url(#textGlow)">
+        Hoomi
+    </text>
+</svg>
