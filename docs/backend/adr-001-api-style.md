@@ -20,7 +20,7 @@ Les considérations importantes sont :
 
 ## Décision
 
-Nous choisirons une **API REST** pour le backend de Hoomi.
+je choisirais une **API REST** pour le backend de Hoomi.
 
 ## Conséquences
 
