@@ -1,11 +1,13 @@
-# Documentation Backend Hoomi
+# Documentation du Backend Hoomi
 
-Ce dossier contient la documentation technique pour le backend de l'application Hoomi.
+Cette documentation couvre l'architecture et les composants du backend de l'application Hoomi.
 
-## Contenu
+## Structure
 
-- **API** : Spécifications de l'API REST.
-- **Services** : Documentation des différents services (Authentification, Messagerie, etc.).
-- **Base de Données** : Schémas et modèles de données.
-- **Sécurité** : Détails sur l'implémentation de la sécurité (E2EE, authentification).
-- **Déploiement** : Instructions pour déployer le backend.
+- [Architecture](architecture/) - Documentation de l'architecture globale du backend
+- [Gestion des Utilisateurs](users/) - Documentation du système de gestion des utilisateurs
+- [Style API](adr-001-api-style.md) - Standards et conventions pour les APIs
+
+## Technologies
+
+Le backend est développé en Go avec le framework Gin, utilisant PostgreSQL comme base de données et Redis pour le cache.
