@@ -1,0 +1,27 @@
+# Hoomi Backend .gitignore
+
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+hoomi-backend
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+
+# Go
+go/pkg/mod/
+go/work/pkg/
+*.test
+
+# Build
+dist/
+build/

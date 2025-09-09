@@ -1,0 +1,27 @@
+{
+  "name": "hoomi",
+  "version": "1.0.0",
+  "description": "Hoomi - Secure Family Social Network",
+  "workspaces": [
+    "web",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=web\" \"npm run dev --workspace=backend\"",
+    "build": "npm run build --workspace=web && npm run build --workspace=backend",
+    "start": "concurrently \"npm start --workspace=web\" \"npm start --workspace=backend\"",
+    "test": "npm test --workspace=web && npm test --workspace=backend"
+  },
+  "keywords": [
+    "nextjs",
+    "go",
+    "gin",
+    "react",
+    "tailwindcss"
+  ],
+  "author": "Hoomi Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

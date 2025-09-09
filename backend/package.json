@@ -1,0 +1,15 @@
+{
+  "name": "hoomi-backend",
+  "version": "1.0.0",
+  "description": "Backend for Hoomi application",
+  "main": "main.go",
+  "scripts": {
+    "start": "go run main.go",
+    "dev": "go run main.go",
+    "test": "go test ./...",
+    "build": "go build -o hoomi-backend main.go"
+  },
+  "keywords": ["go", "gin", "hoomi"],
+  "author": "Hoomi Team",
+  "license": "MIT"
+}
