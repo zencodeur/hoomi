@@ -4,3 +4,6 @@ QWEN.md
 # Documentation générée
 docs/*.html
 docs/*.pdf
+
+# Node modules
+node_modules/
